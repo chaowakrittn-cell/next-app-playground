@@ -154,6 +154,18 @@ const demos = [
     ],
   },
   {
+    name: 'Server and Client Components',
+    items: [
+      {
+        slug: 'server-client-components',
+        name: 'Server and Client Components',
+        nav_title: 'Server & Client',
+        description:
+          'Render on the server by default, then layer in interactivity with Client Components',
+      },
+    ],
+  },
+  {
     name: 'File Conventions',
     items: [
       {

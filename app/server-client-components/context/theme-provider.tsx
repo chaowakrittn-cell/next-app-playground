@@ -1,0 +1,30 @@
+'use client';
+
+import { createContext, useContext, useState } from 'react';
+
+type Theme = 'dark' | 'light';
+
+const ThemeContext = createContext<{
+  theme: Theme;
+  toggle: () => void;
+} | null>(null);
+
+// React context is NOT supported in Server Components, so the provider
+// must be a Client Component that accepts `children`.
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>('dark');
+
+  return (
+    <ThemeContext.Provider
+      value={{ theme, toggle: () => setTheme((t) => (t === 'dark' ? 'light' : 'dark')) }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  const ctx = useContext(ThemeContext);
+  if (!ctx) throw new Error('useTheme must be used within a ThemeProvider');
+  return ctx;
+}
