@@ -166,6 +166,30 @@ const demos = [
     ],
   },
   {
+    name: 'Fetching Data',
+    items: [
+      {
+        slug: 'data-server-components',
+        name: 'Server Components',
+        nav_title: 'Fetch: Server',
+        description: 'Fetch data on the server with the fetch API or an ORM',
+      },
+      {
+        slug: 'data-streaming',
+        name: 'Streaming',
+        nav_title: 'Fetch: Streaming',
+        description:
+          'Progressively stream data-dependent UI with loading.js and Suspense',
+      },
+      {
+        slug: 'data-client-components',
+        name: 'Client Components',
+        nav_title: 'Fetch: Client',
+        description: 'Fetch data in the browser with the use API or useEffect',
+      },
+    ],
+  },
+  {
     name: 'File Conventions',
     items: [
       {
