@@ -129,6 +129,31 @@ const demos = [
     ],
   },
   {
+    name: 'Linking and Navigating',
+    items: [
+      {
+        slug: 'server-rendering',
+        name: 'Server Rendering',
+        description: 'Render pages on the server for fast initial loads',
+      },
+      {
+        slug: 'prefetching',
+        name: 'Prefetching',
+        description: 'Prefetch routes in the background before they are visited',
+      },
+      {
+        slug: 'streaming',
+        name: 'Streaming',
+        description: 'Stream UI from the server to the client progressively',
+      },
+      {
+        slug: 'client-side-transitions',
+        name: 'Client-side Transitions',
+        description: 'Navigate between routes without a full page reload',
+      },
+    ],
+  },
+  {
     name: 'File Conventions',
     items: [
       {
@@ -214,6 +239,16 @@ const demos = [
         name: 'Client Context',
         description:
           'Pass context between Client Components that cross Server/Client Component boundary',
+      },
+    ],
+  },
+  {
+    name: 'Test',
+    items: [
+      {
+        slug: 'test',
+        name: 'Test',
+        description: 'Free text input playground',
       },
     ],
   },
