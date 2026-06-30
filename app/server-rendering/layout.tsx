@@ -25,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           { text: 'Home' },
           { text: 'Prerendered', slug: 'prerendered' },
           { text: 'Dynamic', slug: 'dynamic' },
+          { text: 'generateStaticParams', slug: 'static-params' },
         ]}
       />
       {children}

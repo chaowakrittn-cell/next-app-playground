@@ -28,6 +28,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           { text: 'Dynamic', slug: 'dynamic' },
           { text: 'Dynamic + Loading', slug: 'dynamic-with-loading' },
           { text: 'Viewport', slug: 'viewport' },
+          { text: 'useLinkStatus', slug: 'link-status' },
+          { text: 'Hover Prefetch', slug: 'hover-prefetch' },
         ]}
       />
       {children}
