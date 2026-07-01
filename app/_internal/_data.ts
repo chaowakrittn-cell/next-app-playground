@@ -190,6 +190,18 @@ const demos = [
     ],
   },
   {
+    name: 'Mutating Data',
+    items: [
+      {
+        slug: 'mutating-data',
+        name: 'Server Functions',
+        nav_title: 'Mutations',
+        description:
+          'Mutate data with Server Functions invoked from forms, event handlers, and useEffect',
+      },
+    ],
+  },
+  {
     name: 'File Conventions',
     items: [
       {
