@@ -16,6 +16,25 @@ pnpm install
 pnpm dev
 ```
 
+## Production Build
+
+Some demos — especially caching, revalidating, and Partial Prerendering
+(`use cache`, `cacheLife`, `generateStaticParams`, App Shell Upgrading) — only
+behave correctly in a production build. In `pnpm dev`, prerendering is skipped
+and every request re-renders, so cached values won't stay frozen and build-time
+logs won't fire.
+
+To see the real behavior, build and start the app:
+
+```sh
+pnpm build
+pnpm start
+```
+
+`pnpm build` also prints how each route is rendered — `○` (Static),
+`◐` (Partial Prerender), or `ƒ` (Dynamic) — which is useful for verifying the
+caching demos.
+
 ## Documentation
 
 https://nextjs.org/docs

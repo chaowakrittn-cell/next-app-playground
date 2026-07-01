@@ -2,6 +2,7 @@
 
 import { Boundary } from '#/ui/boundary';
 import { Mdx } from '#/ui/codehike';
+import { Tabs } from '#/ui/tabs';
 import React from 'react';
 import readme from './readme.mdx';
 import { Metadata } from 'next';
@@ -31,7 +32,15 @@ export default async function Layout({
         label="layout.tsx (Cacheable)"
         kind="solid"
         animateRerendering={false}
+        className="flex flex-col gap-9"
       >
+        <Tabs
+          basePath="/cached-routes"
+          items={[
+            { text: 'Cached (use cache)' },
+            { text: 'Uncached', slug: 'uncached' },
+          ]}
+        />
         {children}
       </Boundary>
     </>

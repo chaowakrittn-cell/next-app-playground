@@ -223,6 +223,18 @@ const demos = [
     ],
   },
   {
+    name: 'Error Handling',
+    items: [
+      {
+        slug: 'error-handling',
+        name: 'Error Handling',
+        nav_title: 'Error Handling',
+        description:
+          'Handle expected errors as return values and uncaught exceptions with error boundaries',
+      },
+    ],
+  },
+  {
     name: 'Caching',
     items: [
       {
@@ -250,16 +262,36 @@ const demos = [
           'Cache data at runtime with use cache: remote in dynamic contexts',
       },
       {
-        slug: 'private-cache',
-        name: 'Private Cache',
-        description:
-          'Cache user-specific data with use cache: private using cookies and headers',
-      },
-      {
         slug: 'app-shell-upgrading',
         name: 'App Shell Upgrading',
         description:
           'Navigate instantly to pages that have never been rendered before, then self-upgrade to fully static after the first visit',
+      },
+      {
+        slug: 'partial-prerendering',
+        name: 'Partial Prerendering',
+        nav_title: 'PPR',
+        description:
+          'Compose static, cached, and streamed UI into one partially prerendered page',
+      },
+      {
+        slug: 'non-deterministic',
+        name: 'Non-deterministic Values',
+        nav_title: 'Non-deterministic',
+        description:
+          'Handle Math.random, Date, and crypto with connection() or use cache',
+      },
+    ],
+  },
+  {
+    name: 'Revalidating',
+    items: [
+      {
+        slug: 'revalidating',
+        name: 'Revalidating',
+        nav_title: 'Revalidating',
+        description:
+          'Keep cached data fresh with time-based cacheLife and on-demand tags',
       },
     ],
   },
@@ -270,6 +302,78 @@ const demos = [
         slug: 'use-link-status',
         name: 'useLinkStatus',
         description: 'Create inline visual feedback for link interactions',
+      },
+    ],
+  },
+  {
+    name: 'CSS',
+    items: [
+      {
+        slug: 'css',
+        name: 'CSS',
+        nav_title: 'CSS',
+        description:
+          'Style with Tailwind, CSS Modules, and global CSS — and how import order affects them',
+      },
+    ],
+  },
+  {
+    name: 'Images',
+    items: [
+      {
+        slug: 'images',
+        name: 'Image Optimization',
+        nav_title: 'Images',
+        description:
+          'Optimize images with next/image — local, static import with blur, fill, and remote',
+      },
+    ],
+  },
+  {
+    name: 'Fonts',
+    items: [
+      {
+        slug: 'fonts',
+        name: 'Font Optimization',
+        nav_title: 'Fonts',
+        description:
+          'Self-host and optimize Google and local fonts with next/font — no layout shift',
+      },
+    ],
+  },
+  {
+    name: 'Metadata',
+    items: [
+      {
+        slug: 'metadata',
+        name: 'Metadata & OG Images',
+        nav_title: 'Metadata',
+        description:
+          'Static metadata, generateMetadata, and dynamic OG images with ImageResponse',
+      },
+    ],
+  },
+  {
+    name: 'Route Handlers',
+    items: [
+      {
+        slug: 'route-handlers',
+        name: 'Route Handlers',
+        nav_title: 'Route Handlers',
+        description:
+          'Build API endpoints with route.ts — methods, params, dynamic segments, and caching',
+      },
+    ],
+  },
+  {
+    name: 'Proxy',
+    items: [
+      {
+        slug: 'proxy',
+        name: 'Proxy (Middleware)',
+        nav_title: 'Proxy',
+        description:
+          'Run code before a request with proxy.ts — redirect, rewrite, and modify headers',
       },
     ],
   },
@@ -287,16 +391,6 @@ const demos = [
         name: 'Client Context',
         description:
           'Pass context between Client Components that cross Server/Client Component boundary',
-      },
-    ],
-  },
-  {
-    name: 'Test',
-    items: [
-      {
-        slug: 'test',
-        name: 'Test',
-        description: 'Free text input playground',
       },
     ],
   },

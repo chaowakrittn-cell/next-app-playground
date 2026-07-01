@@ -1,0 +1,4 @@
+/* Imported SECOND — its rule appears later, so it wins the cascade. */
+.fill {
+  background-color: rgb(234 88 12); /* orange-600 */
+}

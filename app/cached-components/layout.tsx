@@ -1,6 +1,7 @@
 import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
 import { Mdx } from '#/ui/codehike';
+import { Tabs } from '#/ui/tabs';
 import React from 'react';
 import readme from './readme.mdx';
 
@@ -28,7 +29,15 @@ export default async function Layout({
         label="layout.tsx (statically inferred)"
         kind="solid"
         animateRerendering={false}
+        className="flex flex-col gap-9"
       >
+        <Tabs
+          basePath="/cached-components"
+          items={[
+            { text: 'Cached Component' },
+            { text: 'Route vs Component', slug: 'vs-route' },
+          ]}
+        />
         {children}
       </Boundary>
     </>

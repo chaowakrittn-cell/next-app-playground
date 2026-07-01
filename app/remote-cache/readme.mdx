@@ -27,6 +27,37 @@ async function getProductPrice(productId: string) {
 
 </Grid>
 
+### Where the cache data actually goes
+
+<Grid>
+
+# !!col
+
+Writing the code is the same everywhere, but where the data is physically stored depends on where you host your app:
+
+- **Vercel (zero config):** deploy and it just works. Vercel intercepts `use cache: remote` and routes the data into its managed Runtime Cache, stored securely in the region closest to your serverless functions.
+- **Self-hosting (Docker, AWS, VPS):** Next.js doesn't know where your remote infrastructure is. You tell it by pointing at a custom cache handler (Redis, Memcached, DynamoDB, …) in your config.
+
+# !!col
+
+```ts next.config.ts
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  cacheComponents: true,
+  cacheHandlers: {
+    // Points to a file where you connect to your Redis/DB
+    remote: require.resolve('./cache-handlers/redis-handler.js'),
+  },
+};
+
+export default nextConfig;
+```
+
+</Grid>
+
+**Golden rule:** because a remote cache entry is **shared across all users globally**, you must not read request-specific APIs — `cookies()`, `headers()`, or `searchParams` — inside a `use cache: remote` function. For per-user data, use `use cache: private` instead (currently experimental).
+
 ### Demo
 
 - **Product data** is fetched with `use cache` in `getData()` - cached in the static shell.

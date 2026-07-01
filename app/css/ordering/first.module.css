@@ -1,0 +1,4 @@
+/* Imported FIRST — its rule appears earlier in the merged stylesheet. */
+.fill {
+  background-color: rgb(37 99 235); /* blue-600 */
+}
